@@ -80,19 +80,34 @@ tornadoWarning('90th and 11th and main');
 
 
 let turtleSteps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
-/*function forward(turtleSteps){
-  for(let i = 0; i < turtleSteps.length; i++){
-    if(turtleSteps[[i]] > 0){
-      turtleSteps > 0;
-    }
-  }
-}*/
+function forwardandLeft(value){
+  return value[0] >= 0 && value[1] >= 0;
+}
+let turtleFiltered = turtleSteps.filter(forwardandLeft);
 
-console.log(turtleSteps 
-  .filter()
-  //.map(turtleSteps[0] + turtleSteps[1])
-  //.forEach()
-);
+// function isBigEnough(value) {
+//     return value >= 10;
+//   }
+//   var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
+// filtered is [12, 130, 44]
+
+function mapping(step){
+  return step[0] + step[1];
+}
+
+let turtleMap = turtleFiltered.map(mapping); 
+console.log(turtleMap);
+
+function stepCount(step,i){
+    console.log(` Movement #${i + 1}: ${step} steps`);
+}
+turtleMap.forEach(stepCount);
+
+
+// console.log(turtlefiltered)
+// //   .map(turtleSteps[0] + turtleSteps[1])
+//   //.forEach()
+// ;
 
 /*function filter(arr, fn) {
   let newArray = [];
@@ -102,3 +117,4 @@ console.log(turtleSteps
     }
   } return newArray;
 }*/
+
