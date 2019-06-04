@@ -83,13 +83,9 @@ let turtleSteps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
 function forwardandLeft(value){
   return value[0] >= 0 && value[1] >= 0;
 }
+
 let turtleFiltered = turtleSteps.filter(forwardandLeft);
 
-// function isBigEnough(value) {
-//     return value >= 10;
-//   }
-//   var filtered = [12, 5, 8, 130, 44].filter(isBigEnough);
-// filtered is [12, 130, 44]
 
 function mapping(step){
   return step[0] + step[1];
@@ -98,23 +94,33 @@ function mapping(step){
 let turtleMap = turtleFiltered.map(mapping); 
 console.log(turtleMap);
 
+
 function stepCount(step,i){
     console.log(` Movement #${i + 1}: ${step} steps`);
 }
+
 turtleMap.forEach(stepCount);
 
 
-// console.log(turtlefiltered)
-// //   .map(turtleSteps[0] + turtleSteps[1])
-//   //.forEach()
-// ;
 
-/*function filter(arr, fn) {
-  let newArray = [];
-  for (let i = 0; i < arr.length; i++){
-    if (fn(arr[i]) === true){
-      newArray.push(arr[i]);
-    }
-  } return newArray;
-}*/
 
+//use reduce function to iterate through array of words
+//construct decoded sentence (string) based on:
+//  if element is 3 char add a space to accumulator
+//  otherwise capitalize LAST character of element and add to accumulator
+//'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest'
+//convert input to array before using .reduce()
+//when invoke reduce () need to set initialValue parameter to empty string so future iterations can 
+//  concatenate more string characters
+let sentence = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+let arr = sentence.split(' ');
+function decodedString(arr){
+  let initialValue = '';
+  if (arr[element].length < 3){ 
+    initialValue += ' '; 
+  } else {
+    initialValue = arr[-1].toUpperCase();
+  };
+  initialValue.split('');
+}
+decodedString.reduce();
