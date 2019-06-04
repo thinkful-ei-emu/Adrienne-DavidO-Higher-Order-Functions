@@ -79,3 +79,26 @@ tornadoWarning('90th and 11th and main');
 
 
 
+let turtleSteps = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+/*function forward(turtleSteps){
+  for(let i = 0; i < turtleSteps.length; i++){
+    if(turtleSteps[[i]] > 0){
+      turtleSteps > 0;
+    }
+  }
+}*/
+
+console.log(turtleSteps 
+  .filter()
+  //.map(turtleSteps[0] + turtleSteps[1])
+  //.forEach()
+);
+
+/*function filter(arr, fn) {
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++){
+    if (fn(arr[i]) === true){
+      newArray.push(arr[i]);
+    }
+  } return newArray;
+}*/
